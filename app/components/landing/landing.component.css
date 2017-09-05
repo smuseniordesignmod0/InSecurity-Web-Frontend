@@ -1,0 +1,44 @@
+html,body{
+	height: 100%;
+	width: 100%;
+}
+#logoContainer{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+#logo_image{
+	width:150px;
+	height:150px;
+}
+
+#group_name{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 50px;
+}
+
+#buttonContainer{
+	margin: auto;
+	width : 500px;
+	border-radius: 50px;
+}
+
+#scanButton{
+	display: block;
+	width: 100%;
+	border-radius: 50px;
+	height: 300px;	
+}
+
+#footerContainer{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom:0px;
+}
+
+#footer{
+	text-align: center;
+	marigin-bottom: 0px;
+}
