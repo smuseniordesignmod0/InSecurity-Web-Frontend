@@ -6,6 +6,7 @@ import { ResultComponent } from './components/result/result.component';
 import { NetworkReportComponent } from './components/networkReport/networkReport.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { DeviceReportComponent } from './components/deviceReport/deviceReport.component';
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
 
 const appRoutes: Routes = [
   { path: 'result', component: ResultComponent },
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent, ResultComponent, NetworkReportComponent, LandingComponent, DeviceReportComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes)
+    BrowserModule, RouterModule.forRoot(appRoutes),
+    RoundProgressModule
   ],
   providers: [],
   bootstrap: [AppComponent]

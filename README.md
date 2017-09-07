@@ -8,7 +8,15 @@ After you have created your project (with arbitrary name), clone the repository 
 
 Target your command line to the project folder you created with CLI, and run command
 
+>npm install angular-svg-round-progressbar --save
+
+This allows the progress bar to work, and you only need to run it once.
+
+The command:
+
 >npm start
+
+Starts the server and needs to be rerun if you stop it for any reason.
 
 Each page in the application has its own component folder, where you will do your development (name your feature branch after the page).
 
