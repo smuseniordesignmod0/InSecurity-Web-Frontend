@@ -16,10 +16,11 @@
     width: 40vw;
     height: 40vw;
     border-radius: 40vw;
-    background-color: lawngreen;
+    border: 10px solid lawngreen;
+    background-color: white;
     text-align: center;
     line-height: 40vw;
-    color: white;
+    color: lawngreen;
     font-size: 35vw;
 }
 

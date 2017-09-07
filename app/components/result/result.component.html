@@ -1,6 +1,6 @@
 <round-progress [current]="current" [max]="max" class="vertical-center horizontal-center" *ngIf="!scanDone"></round-progress>
 <div *ngIf="scanDone" class="align-how-i-want">
     <div class="circle">A</div>
-    <button class="btn btn-primary btn-1">View Report</button>
-    <button class="btn btn-danger btn-2">New Scan</button>
+    <a class="btn btn-primary btn-1" href="/deviceReport">View Report</a>
+    <a class="btn btn-danger btn-2" href="/landing">New Scan</a>
 </div>
