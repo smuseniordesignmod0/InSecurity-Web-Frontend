@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #fafbfc;
+}
+
+.web-top-nav {
+  background: transparent;
+  border-bottom: 0px;
+  box-shadow: none !important;
+}
+
+.logo-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 0px !important;
+  color: #4477b2;
+}
+
+.scan-history-btn {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  color: #4477b2;
+}
