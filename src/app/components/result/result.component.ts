@@ -24,7 +24,7 @@ export class ResultComponent {
 
   fetchProgress = function(){
     this.current = this.api.getProgress();
-    
+
     if(this.current == 100){
       this.subscription.unsubscribe();
       setTimeout(() => this.scanDone = true, 1000);
