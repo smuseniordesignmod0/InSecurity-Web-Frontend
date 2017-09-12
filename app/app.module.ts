@@ -7,12 +7,13 @@ import { NetworkReportComponent } from './components/networkReport/networkReport
 import { LandingComponent } from './components/landing/landing.component';
 import { DeviceReportComponent } from './components/deviceReport/deviceReport.component';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { ApiService } from './services/api.service';
 
 const appRoutes: Routes = [
   { path: 'result', component: ResultComponent },
   { path: 'landing', component: LandingComponent },
   { path: 'deviceReport', component: DeviceReportComponent },
-  { path: 'NetworkReportComponent', component: NetworkReportComponent },
+  { path: 'networkReport', component: NetworkReportComponent },
   { path: '',
     redirectTo: '/landing',
     pathMatch: 'full' }
@@ -26,7 +27,7 @@ const appRoutes: Routes = [
     BrowserModule, RouterModule.forRoot(appRoutes),
     RoundProgressModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
