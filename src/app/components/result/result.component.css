@@ -1,0 +1,49 @@
+.vertical-center{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.horizontal-center{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.circle{
+    width: 40vw;
+    height: 40vw;
+    border-radius: 40vw;
+    border: 10px solid lawngreen;
+    background-color: white;
+    text-align: center;
+    line-height: 40vw;
+    color: lawngreen;
+    font-size: 35vw;
+}
+
+.btn-1{
+    position: absolute;
+    top: 28vh;
+    height: 4vh;
+    width: 8vw;
+    left: 45vw;
+}
+
+.btn-2{
+    position: absolute;
+    top: 28vh;
+    height: 4vh;
+    width: 8vw;
+    left: 55vw;
+}
+
+.align-how-i-want{
+    position: absolute;
+    width: 70vw;
+    height: 60vh;
+    top: 20vh;
+    left: 15vw;
+}
