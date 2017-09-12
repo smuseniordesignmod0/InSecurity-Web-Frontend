@@ -1,28 +1,17 @@
-# WebFrontend
+# InSecurity-Web-Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
+In order for begin development on this project you will need to install npm and angular CLI.
 
-## Development server
+Use this guide to setup the environment as an Angular 4 app: https://coursetro.com/posts/code/55/How-to-Install-an-Angular-4-App
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+After you have created your project (with arbitrary name), clone the repository into the project folder you just created.
 
-## Code scaffolding
+The command:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+>npm start
 
-## Build
+Starts the server and needs to be rerun if you stop it for any reason.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Each page in the application has its own component folder, where you will do your development (name your feature branch after the page).
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+I believe npm runs a server at port 4200, so you can access the app at localhost:4200.
