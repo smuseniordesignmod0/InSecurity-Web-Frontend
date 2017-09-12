@@ -12,3 +12,11 @@
   font-weight: 300;
   font-family: 'Open Sans', sans-serif;
 }
+
+.scan-btn-anchor {
+  margin: 0 auto;
+}
+
+.scan-btn-anchor:hover{
+  text-decoration: none;
+}
