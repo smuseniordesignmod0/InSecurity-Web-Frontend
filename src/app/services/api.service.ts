@@ -10,6 +10,7 @@ export class ApiService {
         }
         else{
             this.progresses = [ 1, 5, 25, 52, 65, 70, 80, 88, 100];
+            return 0;
         }
     }
 }
