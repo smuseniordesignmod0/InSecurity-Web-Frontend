@@ -1,0 +1,14 @@
+.scan-btn{
+  /*background-color: #4477b2 !important;*/
+  background-color: #77b244 !important;
+  height: 35rem;
+  width: 35rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.scan-btn-text {
+  font-size: 6rem;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+}
