@@ -1,23 +1,28 @@
-# InSecurity-Web-Frontend
+# WebFrontend
 
-In order for begin development on this project you will need to install npm and angular CLI.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
-Use this guide to setup the environment as an Angular 4 app: https://coursetro.com/posts/code/55/How-to-Install-an-Angular-4-App
+## Development server
 
-After you have created your project (with arbitrary name), clone the repository into a temporary folder separated from project, then open the repo and copy everything inside (including the .git folder) into the src folder inside the project, replacing ALL of the contents within. If you know a better way to do this please let me know.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Target your command line to the project folder you created with CLI, and run command
+## Code scaffolding
 
->npm install angular-svg-round-progressbar --save
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-This allows the progress bar to work, and you only need to run it once.
+## Build
 
-The command:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
->npm start
+## Running unit tests
 
-Starts the server and needs to be rerun if you stop it for any reason.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Each page in the application has its own component folder, where you will do your development (name your feature branch after the page).
+## Running end-to-end tests
 
-I believe npm runs a server at port 4200, so you can access the app at localhost:4200.
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
