@@ -13,29 +13,40 @@
 }
 
 .circle{
-    width: 40vw;
-    height: 40vw;
-    border-radius: 40vw;
-    border: 10px solid lawngreen;
+    width: 60vh;
+    height: 60vh;
+    border-radius: 60vh;
+    border: 10px solid #77b244;
     background-color: white;
     text-align: center;
-    line-height: 40vw;
-    color: lawngreen;
-    font-size: 35vw;
+    line-height: 55vh;
+    color: #77b244;
+    font-size: 35vh;
+}
+
+.progress-container{
+    width: 60.25vh;
+    height: 60.25vh;
 }
 
 .btn-1{
     position: absolute;
+    background-color: #4477b2;
+    color: white;
     top: 28vh;
     height: 4vh;
+    line-height: 3vh;
     width: 8vw;
     left: 45vw;
 }
 
 .btn-2{
     position: absolute;
+    background-color: #b24844;
+    color: white;
     top: 28vh;
     height: 4vh;
+    line-height: 3vh;
     width: 8vw;
     left: 55vw;
 }

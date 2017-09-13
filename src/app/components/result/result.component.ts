@@ -10,6 +10,7 @@ import { ApiService } from '../../services/api.service';
 export class ResultComponent {
   current = 0;
   max = 100;
+  grade = "A";
   timer = Observable.timer(0,500);
   subscription = null;
   scanDone = false;

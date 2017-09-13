@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ResultComponent } from './components/result/result.component';
 import { NetworkReportComponent } from './components/networkReport/networkReport.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { DeviceReportComponent } from './components/deviceReport/deviceReport.component';
-import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { ApiService } from './services/api.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdProgressSpinnerModule } from '@angular/material';
 
 const appRoutes: Routes = [
   { path: 'result', component: ResultComponent },
@@ -24,10 +25,11 @@ const appRoutes: Routes = [
     AppComponent, ResultComponent, NetworkReportComponent, LandingComponent, DeviceReportComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes),
-    RoundProgressModule
+    BrowserModule, RouterModule.forRoot(appRoutes), BrowserAnimationsModule,
+    MdProgressSpinnerModule
   ],
   providers: [ApiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

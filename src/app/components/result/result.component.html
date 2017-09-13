@@ -1,6 +1,8 @@
-<round-progress [current]="current" [max]="max" class="vertical-center horizontal-center" *ngIf="!scanDone"></round-progress>
+<div class="align-how-i-want" *ngIf="!scanDone">
+    <md-progress-spinner [value]="current" mode="determinate" class="progress-container" strokeWidth="1.2"></md-progress-spinner>
+</div>
 <div *ngIf="scanDone" class="align-how-i-want">
-    <div class="circle">A</div>
-    <a class="btn btn-primary btn-1" href="/networkReport">View Report</a>
-    <a class="btn btn-danger btn-2" href="/landing">New Scan</a>
+    <div class="circle">{{grade}}</div>
+    <a class="btn btn-1" href="/networkReport">View Report</a>
+    <a class="btn btn-2" href="/landing">New Scan</a>
 </div>
