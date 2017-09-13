@@ -2,6 +2,17 @@ html,body{
 	height: 100%;
 	width: 100%;
 }
+
+.bg{
+	position:fixed;
+	background-image: url("../../../assets/images/background.jpg");
+	height: 100%; 
+	width:100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 #logoContainer{
 	position: relative;
 	left: 0px;
@@ -9,8 +20,8 @@ html,body{
 }
 
 #logo_image{
-	width:150px;
-	height:150px;
+	width:100px;
+	height:140px;
 }
 
 #group_name{
@@ -20,6 +31,7 @@ html,body{
 
 #buttonContainer{
 	margin: auto;
+	margin-top: 5%;
 	width : 300px;
 
 }
@@ -43,5 +55,6 @@ html,body{
 
 #footer{
 	text-align: center;
-	marigin-bottom: 0px;
+	margin-bottom: 0px;
+	font-weight:900;
 }

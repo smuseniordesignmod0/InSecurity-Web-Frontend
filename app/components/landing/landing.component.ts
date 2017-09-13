@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 
 export class LandingComponent {
   title = "landing page";
-  logo_img_url = "images/logo.png"
+
 }
