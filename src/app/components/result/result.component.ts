@@ -15,7 +15,7 @@ export class ResultComponent {
   subscription = null;
   scanDone = false;
   ngOnInit() {
-    this.subscription = this.timer.subscribe(() => this.fetchProgress());
+    //this.subscription = this.timer.subscribe(() => this.fetchProgress());
   }
   api : ApiService;
 
@@ -24,11 +24,13 @@ export class ResultComponent {
   }
 
   fetchProgress = function(){
-    this.current = this.api.getProgress();
-
-    if(this.current == 100){
-      this.subscription.unsubscribe();
-      setTimeout(() => this.scanDone = true, 1000);
-    }
+    var superThis = this;
+    this.api.getProgress().subscribe(function(result){
+      superThis.current = result;
+      if(superThis.current == 100){
+        superThis.subscription.unsubscribe();
+        setTimeout(() => superThis.scanDone = true, 1000);
+      }
+    });
   }
 }

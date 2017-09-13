@@ -9,6 +9,7 @@ import { DeviceReportComponent } from './components/deviceReport/deviceReport.co
 import { ApiService } from './services/api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdProgressSpinnerModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'result', component: ResultComponent },
@@ -26,7 +27,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), BrowserAnimationsModule,
-    MdProgressSpinnerModule
+    MdProgressSpinnerModule, HttpClientModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],
