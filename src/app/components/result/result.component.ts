@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { ApiService } from '../../services/api.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'result',
@@ -14,14 +15,14 @@ export class ResultComponent {
   timer = Observable.timer(0,500);
   subscription = null;
   scanDone = false;
+  id = 0;
   ngOnInit() {
+    this.route.params.subscribe(params => this.id = params['id']);
     this.subscription = this.timer.subscribe(() => this.fetchProgress());
   }
-  api : ApiService;
 
-  constructor(api: ApiService){
-    this.api = api;
-  }
+  constructor(private api: ApiService,
+  private route: ActivatedRoute){}
 
   fetchProgress = function(){
     var superThis = this;

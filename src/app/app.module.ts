@@ -8,11 +8,11 @@ import { LandingComponent } from './components/landing/landing.component';
 import { DeviceReportComponent } from './components/deviceReport/deviceReport.component';
 import { ApiService } from './services/api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdProgressSpinnerModule } from '@angular/material';
+import { MdProgressSpinnerModule, MdToolbarModule, MdSidenavModule, MdListModule, MdButtonModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
-  { path: 'result', component: ResultComponent },
+  { path: 'result/:id', component: ResultComponent },
   { path: 'landing', component: LandingComponent },
   { path: 'deviceReport', component: DeviceReportComponent },
   { path: 'networkReport', component: NetworkReportComponent },
@@ -27,7 +27,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), BrowserAnimationsModule,
-    MdProgressSpinnerModule, HttpClientModule
+    MdProgressSpinnerModule, HttpClientModule, MdToolbarModule,
+    MdSidenavModule, MdListModule, MdButtonModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],

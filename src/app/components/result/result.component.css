@@ -35,6 +35,9 @@
     color: white;
     top: 28vh;
     width: 8vw;
+    height: 5vh;
+    font-size: 2vh;
+    line-height: 5vh;
     left: 45vw;
 }
 
@@ -44,6 +47,9 @@
     color: white;
     top: 28vh;
     width: 8vw;
+    height: 5vh;
+    font-size: 2vh;
+    line-height: 5vh;
     left: 55vw;
 }
 
