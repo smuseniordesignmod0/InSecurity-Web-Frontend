@@ -1,8 +1,0 @@
-<div class="align-how-i-want" *ngIf="!scanDone">
-    <md-progress-spinner [value]="current" mode="determinate" class="progress-container" strokeWidth="1.2"></md-progress-spinner>
-</div>
-<div *ngIf="scanDone" class="align-how-i-want">
-    <div class="circle">{{grade}}</div>
-    <a md-raised-button class="btn btn-1" href="/networkReport">View Report</a>
-    <a md-raised-button class="btn btn-2" href="/landing">New Scan</a>
-</div>
