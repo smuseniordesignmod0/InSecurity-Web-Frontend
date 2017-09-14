@@ -7,7 +7,7 @@
     <button type="button" class="btn btn-raised pull-right scan-history-btn" (click)="sidenav.toggle()">Scan History</button>
 </md-toolbar>
 <md-sidenav-container class="side-container">
-<md-sidenav #sidenav mode="side" opened="true" align="end">
+<md-sidenav #sidenav mode="side" opened="false" align="end">
  <div>
   <md-nav-list>
   <a md-list-item href="/result/{{item.id}}" *ngFor="let item of history">{{ item.started }}</a>
@@ -15,4 +15,7 @@
 </div>
 </md-sidenav>
 </md-sidenav-container>
+<md-toolbar style="background-color: black; position: fixed; bottom: 0px;">
+    <a href="/landing"><h4 class="logo-text" style="color: darkgrey;">Contact Us</h4></a>
+</md-toolbar>
 <router-outlet></router-outlet>
