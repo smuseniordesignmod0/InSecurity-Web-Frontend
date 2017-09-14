@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.3.6",
+    "@angular/animations": "^4.2.4",
     "@angular/cdk": "github:angular/cdk-builds",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
@@ -25,7 +25,6 @@
     "@angular/router": "^4.2.4",
     "angular-in-memory-web-api": "^0.4.6",
     "angular-svg-round-progressbar": "^1.1.0",
-    "angular2-in-memory-web-api": "0.0.21",
     "angular2-progressbar": "^0.5.1",
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
