@@ -1,20 +1,27 @@
-<nav class = "navbar navbar-default">
+<nav class = "w3-bar" id = "navbar">
 		<div class="navbar-header">
 		<p id = "group_name">
-			<!--<img src="assets/images/logo.png" alt="logo" id = "logo_image">-->
+			<img src="assets/images/logo.png" alt="logo" id = "logo_image">
 			Insecurity
 		<p>
 		</div>
+		<a href = "teaminsecurity.azurewebsites.net" class = "w3-bar-item w3-button w3-xlarge">WEB</a>
 </nav>
 
 <div class = "bg">
-	
-
-	<div id = "buttonContainer">
-	  <button type="button" routerLink = "/result" routerLinkActive="active" class="w3-button w3-circle" id = "scanButton">Scan</button>  
-	</div>
-	
-	<div id = "footerContainer">
-		<p id = "footer">Powered by SMU ©2017-2017. </p>
+	<div class = "canvas">
+		<div id ="instruContainer">
+			<p id = "instruction">
+				Hit Scan to get an evaluation of the current network you are connected to
+			</p>
+		</div>
+		<div class="circle"><p id = "percent">0 % </p></div>
+		<div id = "buttonContainer">
+			<button type="button" routerLink = "/result" routerLinkActive="active" class="w3-button" id = "scanButton">Scan</button>
+		</div>
+		
+		<div id = "footerContainer">
+			<p id = "footer">Powered by SMU ©2017-2017. </p>
+		</div>
 	</div>
 </div> 

@@ -22,4 +22,3 @@ import 'rxjs/add/operator/catch';
     }
    
   }
-//teaminsecurity.azurewebsites.net

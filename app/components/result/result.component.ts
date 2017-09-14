@@ -10,7 +10,7 @@ import {ReadJsonService} from "../../services/read-json.service";
 export class ResultComponent {
     data : any;
 
-    /*
+    
     constructor(private readJson : ReadJsonService){}
     ngOnInit():void{
       this.readJson.getAll()
@@ -19,7 +19,7 @@ export class ResultComponent {
       );
       console.log(this.data);
     }
-    */
+    
 
 
 
