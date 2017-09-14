@@ -15,7 +15,7 @@ export class ResultComponent {
   subscription = null;
   scanDone = false;
   ngOnInit() {
-    //this.subscription = this.timer.subscribe(() => this.fetchProgress());
+    this.subscription = this.timer.subscribe(() => this.fetchProgress());
   }
   api : ApiService;
 
@@ -25,11 +25,32 @@ export class ResultComponent {
 
   fetchProgress = function(){
     var superThis = this;
-    this.api.getProgress().subscribe(function(result){
-      superThis.current = result;
-      if(superThis.current == 100){
+    this.api.getProgress(1).subscribe(function(result){
+      superThis.current = result.progress;
+      if(result.scanType == "Complete"){
         superThis.subscription.unsubscribe();
-        setTimeout(() => superThis.scanDone = true, 1000);
+        setTimeout(() => superThis.fetchScore(), 1000);
+      }
+    });
+  }
+
+  fetchScore = function(){
+    this.scanDone = true;
+    this.api.getScore(1).subscribe((score) => {
+      if(parseFloat(score) >= 90){
+        this.grade = "A";
+      }
+      else if(parseFloat(score) >= 80){
+        this.grade = "B";
+      }
+      else if(parseFloat(score) >= 70){
+        this.grade = "C";
+      }
+      else if(parseFloat(score) >= 60){
+        this.grade = "D";
+      }
+      else if(parseFloat(score) >= 50){
+        this.grade = "F";
       }
     });
   }
