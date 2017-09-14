@@ -1,7 +1,25 @@
-<div class= "row" style="width: 100%; margin-top: 2%;">
-  <a href="/result" class="scan-btn-anchor">
-    <button type="button" class="btn btn-primary bmd-btn-fab scan-btn">
-        <h1 class="scan-btn-text">SCAN</h1>
-    </button>
-  </a>
+<nav class = "w3-bar" id = "navbar">
+  <p id = "group_name" class = "w3-bar-item">
+    <img src="assets/images/logo.png" alt="logo" id = "logo_image">
+    Insecurity
+  <p>
+  <a class = "w3-bar-item w3-button" id = "weblink" href = "teaminsecurity.azurewebsites.net" >Website</a>
+</nav>
+
+<div class = "bg">
+<div class = "canvas">
+  <div id ="instruContainer">
+    <p id = "instruction">
+      Hit Scan to get an evaluation of the current network you are connected to
+    </p>
+  </div>
+  <div class="circle"><p id = "percent">0 % </p></div>
+  <div id = "buttonContainer">
+    <button type="button" routerLink = "/result" routerLinkActive="active" class="w3-button" id = "scanButton">Scan</button>
+  </div>
+  
+  <div id = "footerContainer">
+    <p id = "footer">Powered by SMU ©2017-2017. </p>
+  </div>
 </div>
+</div> 
