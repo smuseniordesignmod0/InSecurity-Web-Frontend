@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import * as $ from 'jquery';
+import { ApiService } from './services/api.service';
+//mport * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,10 @@ import * as $ from 'jquery';
 })
 export class AppComponent {
   title = 'app';
+  history = [];
+  ngOnInit(){
+    var superThis = this;
+    this.api.getHistory().subscribe(json => superThis.history = json);
+  }
+  constructor(private api: ApiService){}
 }

@@ -1,0 +1,23 @@
+.shift-right{
+    flex: 1 1 auto;
+}
+
+md-sidenav-container md-sidenav {
+  max-width: 15vw;
+  display: flex;
+  overflow: visible;
+}
+
+.side-container{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 0px !important;
+  color: #4477b2;
+  font-size: 30px;
+}
