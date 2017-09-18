@@ -27,9 +27,10 @@ export class ResultComponent {
 
   fetchProgress = function(){
     var superThis = this;
-    this.api.getProgress(1).subscribe(function(result){
+    this.api.getProgress(this.id).subscribe(function(result){
+      console.log(result);
       superThis.current = result.progress;
-      if(result.scanType == "Complete"){
+      if(result.status == "Completed"){
         superThis.subscription.unsubscribe();
         setTimeout(() => superThis.fetchScore(), 1000);
       }
