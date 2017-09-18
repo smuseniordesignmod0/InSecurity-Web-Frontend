@@ -13,7 +13,7 @@ import { NgClass } from '@angular/common';
 
 export class NetworkReportComponent {
     subscription = null;
-    id = 5;
+    id = 0;
     report = [];
     roundedScore = 0;
     deviceList = [];
@@ -28,6 +28,7 @@ export class NetworkReportComponent {
 
     ngOnInit() {
       var superThis = this;
+      this.route.params.subscribe(params => this.id = params['id']);
       this.api.getReport(this.id).subscribe(json => superThis.report = json);
       console.log(superThis.report);
       superThis.roundedScore = superThis.report['Vulnerability_Score'].toFixed(2);

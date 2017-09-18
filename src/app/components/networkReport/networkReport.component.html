@@ -9,7 +9,7 @@
     </div>
     <div class="col-md-3"></div>
     <div class="col-md-2">
-      <h5>Grade: <span [ngClass]="{'text-color-insecure': insecureColor, 'text-color-kinda-secure': kindaSecureColor, 'text-color-secure': secureColor}">{{report['Vulnerability_Grade']}}</span></h5>
+      <!-- <h5>Grade: <span [ngClass]="{'text-color-insecure': insecureColor, 'text-color-kinda-secure': kindaSecureColor, 'text-color-secure': secureColor}">{{report['Vulnerability_Grade']}}</span></h5> -->
       <!-- <img src="../../../assets/images/a_score2.png" height="100px" width="100px" style="float:right; margin-right:10px;"> -->
     </div>
   </div>
@@ -17,7 +17,7 @@
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-      <a class="btn btn-raised router-info-btn" href="/routerReport/1">Router Information</a>
+      <a class="btn btn-raised router-info-btn" href="/routerReport/{{id}}">Router Information</a>
     </div>
   </div>
 
@@ -26,7 +26,7 @@
     <div class="col-md-8">
       <ul class="list-group" style="background-color:white;">
         <li class="list-group-item" style="background-color:#4477b2; color: white">Connected Devices</li>
-        <a *ngFor="let item of report['Devices']" href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">{{item.IP}} <span class="badge connected-devices-badge">CVE Coverage: {{100 - (item.Vulnerability_Score.toFixed(2)*100)}}%</span></li></a>
+        <a *ngFor="let item of report['Devices']" href="/deviceReport/{{id}}/{{item.IP}}" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">{{item.IP}} <span class="badge connected-devices-badge">CVE Coverage: {{100 - (item.Vulnerability_Score.toFixed(2)*100)}}%</span></li></a>
       </ul>
     </div>
   </div>

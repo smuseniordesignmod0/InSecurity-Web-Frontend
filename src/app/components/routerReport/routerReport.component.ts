@@ -14,7 +14,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 export class RouterReportComponent {
 
-  id = 5;
+  id = 0;
   router=[];
 
   constructor(private api: ApiService,
@@ -22,6 +22,7 @@ export class RouterReportComponent {
 
   ngOnInit() {
     var superThis = this;
+    this.route.params.subscribe(params => this.id = params['id']);
     this.api.getRouter(this.id).subscribe(json => superThis.router = json);
     console.log(superThis.router);
   }

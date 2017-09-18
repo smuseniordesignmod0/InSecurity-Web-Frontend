@@ -1,46 +1,16 @@
-<div class="container-fluid" style="margin-top:30px;">
-  <div class="row" style="margin-bottom:30px;">
-    <div class="col-md-2"></div>
-    <div class="col-md-3" style="margin-left:15px; position: relative; top: 30px;">
-      <!-- <div class="row">
-        <h1 class="report-score-text">Vulnerability ID: {{myCveId}}</h1>
+<div class="container-fluid" style="margin-top:7%;">
+  <div class="row" style="margin-bottom:30px; height:60vh;">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="card" style="height:100%;">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align:center;">{{myCveId}}</h4>
+          <h6 class="card-subtitle mb-2 text-muted" style="text-align:center;">Severity: {{CVSS_Severity}} </h6>
+          <p class="card-text" style="margin-top:50px;">{{summary}}</p>
+          <!-- <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a> -->
+        </div>
       </div>
-      <div class="row">
-        <h1 class="report-score-text">Severity: {{CVSS_Severity}}</h1>
-      </div>
-      <div class="row">
-        <h1 class="report-score-text">Summary: {{summary}}</h1>
-      </div> -->
-    </div>
-    <div class="col-md-3">
-
-      <div class="card" style="width: 20rem;">
-  <div class="card-body">
-    <h4 class="card-title"> {{myCveId}}</h4>
-    <h6 class="card-subtitle mb-2 text-muted"> {{CVSS_Severity}} </h6>
-    <p class="card-text">{{summary}}</p>
-    <!-- <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a> -->
-  </div>
-</div>
-
-    </div>
-    <div class="col-md-2">
-      <!-- <h5>Grade: <span [ngClass]="{'text-color-insecure': insecureColor, 'text-color-kinda-secure': kindaSecureColor, 'text-color-secure': secureColor}">{{report['Vulnerability_Grade']}}</span></h5> -->
-      <!-- <img src="../../../assets/images/a_score2.png" height="100px" width="100px" style="float:right; margin-right:10px;"> -->
     </div>
   </div>
-
-  <!-- <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-      <ul class="list-group" style="background-color:white;">
-        <li class="list-group-item" style="background-color:#4477b2; color: white">Connected Devices</li>
-        <a *ngFor="let item of report['Devices']" href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">{{item.IP}} <span class="badge connected-devices-badge">CVE Coverage: {{100 - (item.Vulnerability_Score.toFixed(2)*100)}}%</span></li></a>
-      </ul>
-    </div>
-  </div> -->
-<br>
-
-
 </div>
