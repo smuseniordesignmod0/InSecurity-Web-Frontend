@@ -1,5 +1,5 @@
 <div class="align-how-i-want" *ngIf="!scanDone">
-    <md-progress-spinner [value]="current" mode="determinate" class="progress-container" strokeWidth="1.2"></md-progress-spinner>
+    <md-progress-spinner [value]="current" mode="determinate" class="progress-container" strokeWidth="1.2" style="color: black"></md-progress-spinner>
 </div>
 <div *ngIf="scanDone" class="align-how-i-want">
     <div class="circle">{{grade}}</div>
