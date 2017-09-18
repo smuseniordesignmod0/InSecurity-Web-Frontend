@@ -5,13 +5,14 @@
 md-sidenav-container md-sidenav {
   max-width: 15vw;
   display: flex;
-  overflow: visible;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .side-container{
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 84vh;
 }
 
 .logo-text {
