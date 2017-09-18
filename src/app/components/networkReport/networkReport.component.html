@@ -1,84 +1,37 @@
-<!-- <div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Devices</h4>
-        <ul class="list-group">
-          <li class="list-group-item active">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Morbi leo risus</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <div class="container-fluid" style="margin-top:30px;">
-  <div class="row" style="margin-bottom:15px;">
+  <div class="row" style="margin-bottom:30px;">
     <div class="col-md-2"></div>
     <div class="col-md-3" style="margin-left:15px; position: relative; top: 30px;">
       <div class="row">
-        <h5>Router IP: 127.0.0.1</h5>
+        <!-- <h5>Score: {{report['Vulnerability_Score']}}</h5> -->
+        <h1 class="report-score-text">Score: {{roundedScore}}</h1>
       </div>
-      <div class="row">
-        <h5>MAC Address: E8:ED:05:75:83:9</h5>
-      </div>
-      <!-- <div class="row">
-        <h5>Wireless</h5>
-      </div> -->
     </div>
     <div class="col-md-3"></div>
     <div class="col-md-2">
-      <img src="../../../assets/images/a_score2.png" height="100px" width="100px" style="float:right; margin-right:10px;">
+      <!-- <h5>Grade: <span [ngClass]="{'text-color-insecure': insecureColor, 'text-color-kinda-secure': kindaSecureColor, 'text-color-secure': secureColor}">{{report['Vulnerability_Grade']}}</span></h5> -->
+      <!-- <img src="../../../assets/images/a_score2.png" height="100px" width="100px" style="float:right; margin-right:10px;"> -->
     </div>
   </div>
 
-<!-- <div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-5">
+  <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-      <ul class="list-group" style="background-color:white;">
-        <li class="list-group-item active">Connected Devices</li>
-        <li class="list-group-item" style="border-bottom: 1px solid #fafbfc">Device 1</li>
-        <li class="list-group-item" style="border-bottom: 1px solid #fafbfc">Device 2</li>
-        <li class="list-group-item" style="border-bottom: 1px solid #fafbfc">Device 3</li>
-        <li class="list-group-item" style="border-bottom: 1px solid #fafbfc">Device 4</li>
-      </ul>
+      <a class="btn btn-raised router-info-btn" href="/routerReport/{{id}}">Router Information</a>
     </div>
   </div>
-
-  <div class="col-md-5">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-      <ul class="list-group" style="background-color:white;">
-        <li class="list-group-item active">Open Ports</li>
-        <li class="list-group-item" style="border-bottom: 1px solid black">Port</li>
-        <li class="list-group-item" style="border-bottom: 1px solid black">Port</li>
-        <li class="list-group-item" style="border-bottom: 1px solid black">Port</li>
-        <li class="list-group-item" style="border-bottom: 1px solid black">Port</li>
-      </ul>
-    </div>
-  </div>
-</div> -->
 
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
       <ul class="list-group" style="background-color:white;">
         <li class="list-group-item" style="background-color:#4477b2; color: white">Connected Devices</li>
-        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 1</li></a>
-        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 2</li></a>
-        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 3</li></a>
-        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 4</li></a>
+        <a *ngFor="let item of report['Devices']" href="/deviceReport/{{id}}/{{item.IP}}" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">{{item.IP}} <span class="badge connected-devices-badge">CVE Coverage: {{100 - (item.Vulnerability_Score.toFixed(2)*100)}}%</span></li></a>
       </ul>
     </div>
   </div>
 <br>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
       <ul class="list-group" style="background-color:white;">
@@ -89,6 +42,6 @@
         <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">Port 25</li></a>
       </ul>
     </div>
-  </div>
+  </div> -->
 
 </div>

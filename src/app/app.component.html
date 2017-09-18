@@ -1,9 +1,9 @@
-
-<md-toolbar style="background-color: #4477b2">
-    <a href="/landing"><h2 class="logo-text" style="color: white;">InSecurity</h2></a>
-        <!-- <img src="/assets/images/insec_logo.png" height="35px" width="27px" style="position: relative; top: -3px;"> -->
+<md-toolbar style="background-color: #4477b2; height: 8vh;">
+    <a href="/landing" style="text-decoration: none;"><h2 class="logo-text" style="color: white;">InSecurity
+        <!--<img src="/assets/images/insec_logo.png" height="35px" width="27px" style="position: relative; top: -3px;">-->
+    </h2></a>
     <span class="shift-right"></span>
-    <button type="button" class="btn btn-raised pull-right scan-history-btn" (click)="sidenav.toggle()">Scan History</button>
+    <button md-raised-button type="button" (click)="sidenav.toggle()">Scan History</button>
 </md-toolbar>
 <md-sidenav-container class="side-container">
 <md-sidenav #sidenav mode="side" opened="false" align="end">
@@ -14,8 +14,8 @@
 </div>    
 </md-sidenav>
 </md-sidenav-container>
-<md-toolbar style="background-color: black; position: fixed; bottom: 0px;">
+<!-- <md-toolbar style="background-color: black; position: fixed; bottom: 0px;">
     <a href="/landing"><h4 class="logo-text" style="color: darkgrey;">Contact Us</h4></a>
-</md-toolbar>
+</md-toolbar> -->
 <router-outlet></router-outlet>
 <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>

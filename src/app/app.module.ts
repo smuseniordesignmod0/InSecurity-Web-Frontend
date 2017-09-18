@@ -6,6 +6,8 @@ import { ResultComponent } from './components/result/result.component';
 import { NetworkReportComponent } from './components/networkReport/networkReport.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { DeviceReportComponent } from './components/deviceReport/deviceReport.component';
+import { RouterReportComponent } from './components/routerReport/routerReport.component';
+import { CveReportComponent } from './components/cveReport/cveReport.component';
 import { ApiService } from './services/api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdProgressSpinnerModule, MdToolbarModule, MdSidenavModule, MdListModule, MdButtonModule } from '@angular/material';
@@ -15,8 +17,10 @@ import { ParticlesModule } from 'angular-particle';
 const appRoutes: Routes = [
   { path: 'result/:id', component: ResultComponent },
   { path: 'landing', component: LandingComponent },
-  { path: 'deviceReport', component: DeviceReportComponent },
-  { path: 'networkReport', component: NetworkReportComponent },
+  { path: 'deviceReport/:id/:device', component: DeviceReportComponent },
+  { path: 'networkReport/:id', component: NetworkReportComponent },
+  { path: 'routerReport/:id', component: RouterReportComponent },
+  { path: 'cveReport/:id/:cveID', component: CveReportComponent },
   { path: '',
     redirectTo: '/landing',
     pathMatch: 'full' }
@@ -24,7 +28,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, ResultComponent, NetworkReportComponent, LandingComponent, DeviceReportComponent
+    AppComponent, ResultComponent, NetworkReportComponent, LandingComponent, DeviceReportComponent, RouterReportComponent, CveReportComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), BrowserAnimationsModule,

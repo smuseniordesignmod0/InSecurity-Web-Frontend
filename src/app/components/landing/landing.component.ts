@@ -43,6 +43,7 @@ import {
     ])
   ]
 })
+
 export class LandingComponent implements OnInit{
   myStyle: object = {};
 	myParams: object = {};
