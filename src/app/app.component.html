@@ -11,10 +11,11 @@
   <md-nav-list>
   <a md-list-item href="/result/{{item.id}}" *ngFor="let item of history">{{ item.started }}</a>
 </md-nav-list>
-</div>
+</div>    
 </md-sidenav>
 </md-sidenav-container>
 <md-toolbar style="background-color: black; position: fixed; bottom: 0px;">
     <a href="/landing"><h4 class="logo-text" style="color: darkgrey;">Contact Us</h4></a>
 </md-toolbar>
 <router-outlet></router-outlet>
+<particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
