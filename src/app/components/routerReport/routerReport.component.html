@@ -1,0 +1,82 @@
+<!-- <div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Devices</h4>
+        <ul class="list-group">
+          <li class="list-group-item active">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container-fluid" style="margin-top:30px;">
+  <div class="row" style="margin-bottom:30px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-3" style="margin-left:15px; position: relative; top: 30px;">
+      <div class="row">
+        <h5>Router Public IP: {{router.publicIP}}</h5>
+      </div>
+      <div class="row">
+        <h5>Router Private IP: {{router.IP}}</h5>
+      </div>
+      <div class="row">
+        <h5>MAC Address: {{router.MAC_Address}}</h5>
+      </div>
+      <div class="row">
+        <h5>Router Vendor: {{router.Vendor}}</h5>
+      </div>
+      <div class="row">
+        <h5>Vulnerability Score: {{router.Vulnerability_Score.toFixed(4)*100}}</h5>
+      </div>
+      <!-- <div class="row">
+        <h5>Wireless</h5>
+      </div> -->
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-2">
+      <!-- <img src="../../../assets/images/a_score2.png" height="100px" width="100px" style="float:right; margin-right:10px;"> -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="list-group" style="background-color:white; padding-top:0px;">
+          <div class="list-group-item" style="background-color:#4477b2; color: white">Common Vulnerabilities and Exposures</div>
+            <a *ngFor="let cve of router.host_CVE_list"href="/deviceReport" style="color: black;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{cve.Vuln_ID}} <small class="mb-1" style="text-align:right;"> Severity: {{cve.CVSS_Severity}} </small></div></a>
+        <!-- <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 2</li></a>
+        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 3</li></a>
+        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 4</li></a> -->
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="list-group" style="background-color:white; padding-top:0px;">
+          <div class="list-group-item" style="background-color:#4477b2; color: white">Services</div>
+            <!-- <a *ngFor="let service of router.Services"href="/deviceReport" style="color: black;"><div class="list-group-item" style="border-bottom: 1px solid #fafbfc">{{service.name}} <div style="position: relative; right:-320px;">(Port: {{service.port}})</div></div></a> -->
+            <a *ngFor="let service of router.Services"href="/deviceReport" style="color: black;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{service.name}}<small class="mb-1" style="text-align:left;"> (Port: {{service.port}})</small></div></a>
+            <!-- <small class="mb-1"> FTP (File Transfer Protocol) </small> -->
+      </div>
+    </div>
+  </div>
+<br>
+  <!-- <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <ul class="list-group" style="background-color:white;">
+        <li class="list-group-item" style="background-color:#4477b2; color: white">Services</li>
+        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">Port 21</li></a>
+        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">Port 22</li></a>
+        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">Port 23</li></a>
+        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">Port 25</li></a>
+      </ul>
+    </div>
+  </div> -->
+
+</div>
