@@ -1,54 +1,45 @@
 <div class="container-fluid" style="margin-top:30px;">
-  <div class="row" style="margin-bottom:15px;">
+  <div class="row" style="margin-bottom:30px;">
     <div class="col-md-2"></div>
-    <div class="col-md-3" style="margin-left:15px; position: relative;">
+    <div class="col-md-3" style="margin-left:15px; position: relative; top: 30px;">
       <div class="row">
-        <h5>OS: Windows 10</h5>
+        <h5>Device IP: {{myDeviceIP}}</h5>
+      </div>
+
+      <!-- <div class="row">
+        <h5></h5>
       </div>
       <div class="row">
-        <h5>IP Address: 127.0.0.1</h5>
+        <h5></h5>
+      </div> -->
+      <div class="row">
+        <h5>Vulnerability Score: {{myDeviceVulnScore.toFixed(4)*100}}</h5>
       </div>
-	  <div class="row">
-        <h5>MAC Address: 01:23:45:67:89:ab</h5>
-      </div>
-	  <div class="row">
-        <h5>Version: 1709</h5>
-      </div>
+      <!-- <div class="row">
+        <h5>Wireless</h5>
+      </div> -->
     </div>
     <div class="col-md-3"></div>
     <div class="col-md-2">
-      <img src="../../../assets/images/a_score2.png" height="100px" width="100px" style="float:right; margin-right:10px;">
+      <!-- <img src="../../../assets/images/a_score2.png" height="100px" width="100px" style="float:right; margin-right:10px;"> -->
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-2"></div>
-    <div class="col-md-8">
-		<div class="list-group" style="background-color:white;">
-			<div class="list-group-item" style="background-color:#4477b2; color: white"> Open Ports </div>
-			<div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">
-				TCP Port 21
-				<small class="mb-1"> FTP (File Transfer Protocol) </small>
-			</div>
-			<div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">
-				TCP Port 25
-				<small class="mb-1"> SMTP (Simple Mail Transfer Protocol) </small>
-			</div>
-			<div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">
-				TCP Port 1433
-				<small class="mb-1"> Microsoft SQL Server </small>
-			</div>
-		</div> 
-      <!--<ul class="list-group collapsible" data-collapsible="expandable" style="background-color:white;">
-        <li class="list-group-item" style="background-color:#4477b2; color: white">Open Ports</li>
-		<div class="collapsible-header" >TCP Port 21</div>
-		<div class="collapsible-body">FTP (File Transfer Protocol)</div>
-		<div class="collapsible-header">TCP Port 25</div>
-		<div class="collapsible-body">SMTP (Simple Mail Transfer Protocol)</div>
-		<div class="collapsible-header">TCP Port 1433</div>
-		<div class="collapsible-body">Microsoft SQL Server</div>
-      </ul>-->
+    <div class="col-md-4">
+      <div class="list-group" style="background-color:white; padding-top:0px;">
+          <div class="list-group-item" style="background-color:#4477b2; color: white">Common Vulnerabilities and Exposures</div>
+            <a *ngFor="let vuln of myDeviceVulns"href="/cveReport/{{id}}/{{vuln.Vuln_ID}}" style="color: black;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{vuln.Vuln_ID}} <small class="mb-1" style="text-align:right;"> Severity: {{vuln.CVSS_Severity}} </small></div></a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="list-group" style="background-color:white; padding-top:0px;">
+          <div class="list-group-item" style="background-color:#4477b2; color: white">Services</div>
+            <a *ngFor="let service of myDeviceServices"href="/deviceReport" style="color: black;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{service.name}}<small class="mb-1" style="text-align:left;"> (Port: {{service.port}})</small></div></a>
+      </div>
     </div>
   </div>
+<br>
 
 </div>
