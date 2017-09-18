@@ -16,7 +16,7 @@ const appRoutes: Routes = [
   { path: 'result/:id', component: ResultComponent },
   { path: 'landing', component: LandingComponent },
   { path: 'deviceReport', component: DeviceReportComponent },
-  { path: 'networkReport', component: NetworkReportComponent },
+  { path: 'networkReport/:id', component: NetworkReportComponent },
   { path: 'routerReport/:id', component: RouterReportComponent },
   { path: '',
     redirectTo: '/landing',
