@@ -13,50 +13,64 @@
 }
 
 .circle{
-    width: 60vh;
-    height: 60vh;
-    border-radius: 60vh;
-    border: 10px solid #77b244;
+    position: absolute;
+    top: 0px;
+    width: 52.7vh;
+    height: 52.7vh;
+    border-radius: 52.7vh;
     background-color: white;
     text-align: center;
-    line-height: 55vh;
     color: #77b244;
-    font-size: 35vh;
+}
+
+.gray{
+    line-height: 47.7vh;
+    font-size: 13.7vh;
+    border: 10px solid lightgrey;
+}
+
+.green{
+    line-height: 47.7vh;
+    font-size: 32.7vh;
+    border: 10px solid #77b244;
 }
 
 .progress-container{
-    width: 60.25vh;
-    height: 60.25vh;
+    position: absolute;
+    top: -.55vh;
+    left: -.55vh;
+    width: 53.75vh;
+    height: 53.75vh;
 }
 
 .btn-1{
     position: absolute;
     background-color: #4477b2;
     color: white;
-    top: 28vh;
+    top: 60vh;
     width: 8vw;
     height: 5vh;
     font-size: 1.5vh;
     line-height: 5vh;
-    left: 45vw;
+    left: 4.2vw;
 }
 
 .btn-2{
     position: absolute;
     background-color: #b24844;
     color: white;
-    top: 28vh;
+    top: 60vh;
     width: 8vw;
     height: 5vh;
     font-size: 1.5vh;
     line-height: 5vh;
-    left: 55vw;
+    left: 14.2vw;
 }
 
 .align-how-i-want{
-    position: absolute;
-    width: 70vw;
+    position: relative;
+    top: 6.407vh;
     height: 60vh;
-    top: 20vh;
-    left: 15vw;
+    margin: auto;
+    width: 52.7vh;
 }
