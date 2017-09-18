@@ -14,8 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 const appRoutes: Routes = [
   { path: 'result/:id', component: ResultComponent },
   { path: 'landing', component: LandingComponent },
-  { path: 'deviceReport', component: DeviceReportComponent },
-  { path: 'networkReport', component: NetworkReportComponent },
+  { path: 'result/:id/deviceReport/:device', component: DeviceReportComponent },
+  { path: 'result/:id/networkReport', component: NetworkReportComponent },
   { path: '',
     redirectTo: '/landing',
     pathMatch: 'full' }
