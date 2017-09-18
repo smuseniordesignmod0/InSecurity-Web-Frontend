@@ -84,11 +84,10 @@ html,body{
 }
 
 #instruContainer{
+	height : 30%;
 	margin-top:5%;
-	position:absolute;
-	margin-left : 5px;
-	height:100%;
-	width : 20%;
+	margin : auto;
+	width : 30%;
 }
 
 #instruction{

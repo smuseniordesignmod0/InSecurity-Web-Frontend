@@ -12,6 +12,7 @@ import { ApiService } from './services/api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdProgressSpinnerModule, MdToolbarModule, MdSidenavModule, MdListModule, MdButtonModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { ParticlesModule } from 'angular-particle';
 
 const appRoutes: Routes = [
   { path: 'result/:id', component: ResultComponent },
@@ -32,7 +33,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), BrowserAnimationsModule,
     MdProgressSpinnerModule, HttpClientModule, MdToolbarModule,
-    MdSidenavModule, MdListModule, MdButtonModule
+    MdSidenavModule, MdListModule, MdButtonModule, ParticlesModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],
