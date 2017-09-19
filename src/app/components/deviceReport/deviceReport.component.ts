@@ -21,9 +21,37 @@ export class DeviceReportComponent {
   myDeviceVulns = [];
   myDeviceServices = [];
   myDeviceVulnScore = '';
+  cveLimit = 0;
+  serviceLimit = 0;
 
   constructor(private api: ApiService,
   private route: ActivatedRoute){}
+
+  showList = function(index,limiter){
+    return Math.floor(index/10) == limiter;
+  }
+
+  changeCVEPage = function(change,list){
+    this.cveLimit = this.cveLimit + change;
+    if(this.cveLimit < 0){
+      this.cveLimit = 0;
+    }
+    var maxPage = Math.floor(list.length/10);
+    if(this.cveLimit > maxPage){
+      this.cveLimit = maxPage;
+    }
+  }
+
+  changeServicePage = function(change,list){
+    this.serviceLimit = this.serviceLimit + change;
+    if(this.serviceLimit < 0){
+      this.serviceLimit = 0;
+    }
+    var maxPage = Math.floor(list.length/10);
+    if(this.serviceLimit > maxPage){
+      this.serviceLimit = maxPage;
+    }
+  }
 
   ngOnInit() {
     var superThis = this;
