@@ -48,6 +48,7 @@ import {
     ])
   ]
 })
+
 export class LandingComponent implements OnInit{
   state1 : any = 'void';
   state2 : any = 'void';

@@ -1,0 +1,52 @@
+<div class="container-fluid" style="margin-top:30px;">
+  <div class="row" style="margin-bottom:30px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-3" style="margin-left:15px; position: relative; top: 30px;">
+      <div class="row">
+        <h5>Router Public IP: {{router.publicIP}}</h5>
+      </div>
+      <div class="row">
+        <h5>Router Private IP: {{router.IP}}</h5>
+      </div>
+      <div class="row">
+        <h5>MAC Address: {{router.MAC_Address}}</h5>
+      </div>
+      <div class="row">
+        <h5>Router Vendor: {{router.Vendor}}</h5>
+      </div>
+      <div class="row">
+        <h5>Vulnerability Score: {{router.Vulnerability_Score.toFixed(4)*100}}</h5>
+      </div>
+      <!-- <div class="row">
+        <h5>Wireless</h5>
+      </div> -->
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-2">
+      <!-- <img src="../../../assets/images/a_score2.png" height="100px" width="100px" style="float:right; margin-right:10px;"> -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="list-group" style="background-color:white; padding-top:0px;">
+          <div class="list-group-item" style="background-color:#4477b2; color: white"><div class="pull-left">Common Vulnerabilities and Exposures</div><div class="pull-right"><span class="glyphicon glyphicon-circle-arrow-left" (click)="changeCVEPage(-1,router.host_CVE_list)"></span><span class="glyphicon glyphicon-circle-arrow-right" (click)="changeCVEPage(1,router.host_CVE_list)"></span></div><div class="clearfix"></div></div>
+            <ng-container *ngFor="let cve of router.host_CVE_list; let i = index"><a href="/cveReport/{{id}}/{{cve.Vuln_ID}}" style="color: black;" *ngIf="showList(i,cveLimit)"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{cve.Vuln_ID}} <small class="mb-1" style="text-align:right;"> Severity: {{cve.CVSS_Severity}} </small></div></a></ng-container>
+        <!-- <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 2</li></a>
+        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 3</li></a>
+        <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 4</li></a> -->
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="list-group" style="background-color:white; padding-top:0px;">
+          <div class="list-group-item" style="background-color:#4477b2; color: white"><div class="pull-left">Services</div><div class="pull-right"><span class="glyphicon glyphicon-circle-arrow-left" (click)="changeServicePage(-1,router.Services)"></span><span class="glyphicon glyphicon-circle-arrow-right" (click)="changeServicePage(1,router.Services)"></span></div><div class="clearfix"></div></div>
+            <!-- <a *ngFor="let service of router.Services"href="/deviceReport" style="color: black;"><div class="list-group-item" style="border-bottom: 1px solid #fafbfc">{{service.name}} <div style="position: relative; right:-320px;">(Port: {{service.port}})</div></div></a> -->
+            <ng-container *ngFor="let service of router.Services; let i = index"><a href="/deviceReport" style="color: black;" *ngIf="showList(i,serviceLimit)"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{service.name}}<small class="mb-1" style="text-align:left;"> (Port: {{service.port}})</small></div></a></ng-container>
+            <!-- <small class="mb-1"> FTP (File Transfer Protocol) </small> -->
+      </div>
+    </div>
+  </div>
+<br>
+
+</div>

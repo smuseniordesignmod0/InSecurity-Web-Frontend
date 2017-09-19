@@ -5,7 +5,8 @@
 md-sidenav-container md-sidenav {
   max-width: 15vw;
   display: flex;
-  overflow: visible;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .side-container{

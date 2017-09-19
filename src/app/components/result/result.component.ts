@@ -19,6 +19,7 @@ export class ResultComponent {
   ngOnInit() {
     this.route.params.subscribe(params => this.id = params['id']);
     this.subscription = this.timer.subscribe(() => this.fetchProgress());
+    // console.log(this.id);
   }
 
   constructor(private api: ApiService,
@@ -37,7 +38,8 @@ export class ResultComponent {
 
   fetchScore = function(){
     this.scanDone = true;
-    this.api.getScore(1).subscribe((score) => {
+    // console.log(this.id);
+    this.api.getScore(this.id).subscribe((score) => {
       if(parseFloat(score) >= 90){
         this.grade = "A";
       }
