@@ -6,6 +6,7 @@
     <button md-raised-button type="button" (click)="sidenav.toggle()">Scan History</button>
 </md-toolbar>
 <md-sidenav-container class="side-container">
+        <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
 <md-sidenav #sidenav mode="side" opened="false" align="end">
  <div>
   <md-nav-list>
@@ -18,4 +19,3 @@
     <a href="/landing"><h4 class="logo-text" style="color: darkgrey;">Contact Us</h4></a>
 </md-toolbar> -->
 <router-outlet></router-outlet>
-<particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
