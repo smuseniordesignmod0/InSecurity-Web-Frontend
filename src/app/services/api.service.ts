@@ -18,42 +18,42 @@ export class ApiService {
     constructor(private http: HttpClient){}
 
     getProgress(id : number) : Observable<any> {
-        // var progress : number = 0;
-        // var complete : string = "Incomplete";
-        // if(this.progresses.length > 0){
-        //     progress = this.progresses.shift();
-        // }
-        // else{
-        //     complete = "Complete";
-        //     progress = 100;
-        //     this.progresses = [ 1, 5, 25, 52, 65, 70, 80, 88, 97];
-        // }
-        // var json = statusJson;
-        // json.progress = progress;
-        // json.scanType = complete;
-        // return Observable.of(json);
-        return this.http.get(this.prefix+"Scan/"+id+"/Status");
+        var progress : number = 0;
+        var complete : string = "Incomplete";
+        if(this.progresses.length > 0){
+            progress = this.progresses.shift();
+        }
+        else{
+            complete = "Complete";
+            progress = 100;
+            this.progresses = [ 1, 5, 25, 52, 65, 70, 80, 88, 97];
+        }
+        var json = statusJson;
+        json.progress = progress;
+        json.scanType = complete;
+        return Observable.of(json);
+        // return this.http.get(this.prefix+"Scan/"+id+"/Status");
     }
 
     startScan() : Observable<any> {
-        // return Observable.of({id : 5});
-        return this.http.post(this.prefix+"Scanner/Scan", {"scanType": "Complete"});
+        return Observable.of({id : 5});
+        // return this.http.post(this.prefix+"Scanner/Scan", {"scanType": "Complete"});
     }
 
     getHistory() : Observable<any> {
-        // return Observable.of(historyJson);
-        return this.http.get(this.prefix+"Scanner/History");
+        return Observable.of(historyJson);
+        // return this.http.get(this.prefix+"Scanner/History");
     }
 
     getReport(id : number) : Observable<any> {
         if(typeof this.reportFetched[id] === "undefined"){
             this.reportFetched[id] = {};
             this.reportFetched[id].fetched = true;
-            this.reportFetched[id].report = this.http.get(this.prefix+"Scan/"+id+"/Report").map((resp : Response) => resp.json());
-            // this.reportFetched[id].report = Observable.of(reportJson);
+            // this.reportFetched[id].report = this.http.get(this.prefix+"Scan/"+id+"/Report").map((resp : Response) => resp.json());
+            this.reportFetched[id].report = Observable.of(reportJson);
         }
-        // return this.reportFetched[id].report;
-        return this.http.get(this.prefix+"Scan/"+id+"/Report");
+        return this.reportFetched[id].report;
+        // return this.http.get(this.prefix+"Scan/"+id+"/Report");
     }
 
     getRouter(id : number) : Observable<any> {

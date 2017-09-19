@@ -5,7 +5,7 @@
   <a class = "w3-bar-item w3-button" id = "weblink" href = "teaminsecurity.azurewebsites.net" >Website</a>
 </nav> -->
 
-<div class = "bg">
+<!-- <div class = "bg">
 <div class = "canvas">
   <div  id ="instruContainer">
     <p id = "instruction">
@@ -17,8 +17,25 @@
     <button type="button" (click)="startScan()" routerLinkActive="active" class="w3-button" id = "scanButton">Scan</button>
   </div>
 
-  <!-- <div id = "footerContainer">
+  <div id = "footerContainer">
     <p id = "footer">Powered by SMU ©2017-2017. </p>
-  </div> -->
+  </div>
 </div>
+</div> -->
+<div class="container-fluid" style="margin-top:30px; background-color:;">
+  <div class="row" style="margin-bottom:30px; height: 80vh;">
+    <div class="col-md-6" style="text-align:center;">
+      <div class="landing-text-div">
+        <h1 class="landing-h1">Scan your network for vulnerabilities <br> with InSecurity!</h1>
+        <div   id = "buttonContainer">
+          <button type="button" (click)="startScan()" routerLinkActive="active" id="scanButton" md-raised-button>SCAN</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="../../../assets/images/landing-vector.png" height="100%"style="overflow: hidden;">
+    </div>
+  </div>
+
+
 </div>

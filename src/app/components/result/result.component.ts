@@ -30,12 +30,26 @@ export class ResultComponent {
     this.api.getProgress(this.id).subscribe(function(result){
       console.log(result);
       superThis.current = result.progress;
-      if(result.status == "Completed"){
+      if(result.scanType == "Complete"){
         superThis.subscription.unsubscribe();
         setTimeout(() => superThis.fetchScore(), 1000);
       }
     });
   }
+
+  // Use when hitting live API
+  //
+  // fetchProgress = function(){
+  //   var superThis = this;
+  //   this.api.getProgress(this.id).subscribe(function(result){
+  //     console.log(result);
+  //     superThis.current = result.progress;
+  //     if(result.status == "Completed"){
+  //       superThis.subscription.unsubscribe();
+  //       setTimeout(() => superThis.fetchScore(), 1000);
+  //     }
+  //   });
+  // }
 
   fetchScore = function(){
     this.scanDone = true;

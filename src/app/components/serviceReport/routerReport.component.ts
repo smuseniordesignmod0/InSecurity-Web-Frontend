@@ -28,6 +28,8 @@ export class RouterReportComponent {
       superThis.router = json;
       console.log(superThis.router);
       superThis.routerVulnScore = superThis.router['Vulnerability_Score'];
+      console.log(superThis.router['Vulnerability_Score']);
+      console.log(this.routerVulnScore);
       // this.router.Vulnerability_Score.toFixed(4)*100;
       // console.log(superThis.router['Vulnerability_Score']);
       // superThis.routerVulnScore = superThis.router['Vulnerability_Score'];

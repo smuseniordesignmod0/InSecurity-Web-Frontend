@@ -29,11 +29,14 @@ export class NetworkReportComponent {
     ngOnInit() {
       var superThis = this;
       this.route.params.subscribe(params => this.id = params['id']);
-      this.api.getReport(this.id).subscribe(json => superThis.report = json);
-      console.log(superThis.report);
-      superThis.roundedScore = superThis.report['Vulnerability_Score'].toFixed(2);
-      superThis.deviceList = superThis.report['Devices'];
-      superThis.roundedBadgeNumbers = [];
+      this.api.getReport(this.id).subscribe(function(json) {
+        superThis.report = json;
+        console.log(superThis.report);
+        superThis.roundedScore = superThis.report['Vulnerability_Score'].toFixed(2);
+        superThis.deviceList = superThis.report['Devices'];
+        superThis.roundedBadgeNumbers = [];
+
+      });
 
       // for (let x = 0; x < superThis.deviceList.length; x++) {
       //   let networkDevice = superThis.deviceList[x];

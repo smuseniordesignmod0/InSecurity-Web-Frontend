@@ -1,4 +1,4 @@
-html,body{
+/*html,body{
 	height: 100%;
 	width: 100%;
 }
@@ -28,17 +28,17 @@ html,body{
 
 .bg{
 	position:fixed;
-	/*background-image: url("../../../assets/images/background.jpg");*/
+	background-image: url("../../../assets/images/landing-vector.png");
 	background-color: #fafbfc;
 	height: 100%;
 	width:100%;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 
 .canvas{
-	background-color : white;
+	background-color : transparent;
 	width: 80%;
     margin : auto;
     margin-top: 1%;
@@ -108,4 +108,28 @@ html,body{
 	text-align: center;
 	margin-bottom: 0px;
 	font-weight:900;
+}*/
+
+.landing-text-div{
+	position: relative;
+	top: 45%;
+	transform: translateY(-50%);
+	color:#4477b2;
+}
+
+.landing-h1{
+	color:#4477b2;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300 !important;
+}
+
+#scanButton {
+	background-color: rgb(136, 188,85);
+	height: 50px;
+	min-width: 200px;
+	margin-top: 15px;
+	color:white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300 !important;
+	font-size: 23px;
 }
