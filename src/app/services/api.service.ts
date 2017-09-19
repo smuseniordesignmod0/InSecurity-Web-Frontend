@@ -35,7 +35,7 @@ export class ApiService {
         //return this.http.get(this.prefix+"Scan/"+id+"/Status");
     }
 
-    startScan(body) : Observable<any> {
+    startScan() : Observable<any> {
         return Observable.of({id : 5});
         //return this.http.post(this.prefix+"Scanner/Scan",body);
     }

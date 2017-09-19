@@ -3,28 +3,6 @@ html,body{
 	width: 100%;
 }
 
-#navbar{
-	background-color: rgb(84,139,192);
-}
-
-#logo_image{
-	width:50px;
-	height:70px;
-}
-
-#group_name{
-	font-size: 50px;
-	color:white;
-}
-
-#weblink{
-	margin-left: 30px;
-	text-align: center;
-	line-height: 70px;
-	font-size: 30px;
-  color:white;
-  margin-top:10px;
-}
 
 .bg{
 	position:fixed;
@@ -35,34 +13,6 @@ html,body{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-.canvas{
-	background-color : white;
-	width: 80%;
-    margin : auto;
-    margin-top: 1%;
-    padding : 30px 50px 30px 50px;
-}
-
-
-.circle{
-	margin:auto;
-	width: 400px;
-	height: 400px;
-    border-radius: 40vw;
-    border: 10px solid rgb(136, 188,85);
-    background-color: white;
-    color: rgb(136, 188,85);
-}
-
-#percent{
-	text-align: center;
-	margin-top: 120px;
-	font-size: 80px;
-	color:rgb(136, 188,85);
-
-
 }
 
 #buttonContainer{
@@ -91,6 +41,13 @@ html,body{
 }
 
 #instruction{
+	margin-top: 20%;
+	color: grey;
+	word-wrap:normal;
+	font-size: 30px;
+}
+
+#instruction1{
 	color: grey;
 	word-wrap:normal;
 	font-size: 30px;

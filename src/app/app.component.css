@@ -10,8 +10,6 @@ md-sidenav-container md-sidenav {
 
 .side-container{
   position: fixed;
-  width: 100vw;
-  height: 100vh;
 }
 
 .logo-text {
