@@ -1,25 +1,18 @@
-<!-- <nav class = "w3-bar" id = "navbar">
-  <p id = "group_name" class = "w3-bar-item">
-    Insecurity
-  <p>
-  <a class = "w3-bar-item w3-button" id = "weblink" href = "teaminsecurity.azurewebsites.net" >Website</a>
-</nav> -->
-<particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
-<div class = "bg">
+
+
+
 
 
   <div id ="instruContainer"> 
-    <p id = "text1" [@state] = "state1"> Welcome to Insecurity <br></p>
-    <p id = "text2" [@state] = "state2"> We are here to test your network security<br></p>
-    <p id = "text2" [@state] = "state3"> Hit the Scan button to start<br></p>
+    <p id = "instruction" [@state] = "state1"> Welcome to Insecurity.<br></p>
+    <p id = "instruction1" [@state] = "state2"> We are here to test your network security.<br></p>
+    <p id = "instruction1" [@state] = "state3"> Hit the Scan button to start.<br></p>
 
   </div>
   <div   id = "buttonContainer">
-    <button [@state] = "state3" (click) = "toggleState()" type="button" routerLink = "/result" routerLinkActive="active" class="w3-button" id = "scanButton">Scan</button>
+    <a [@state] = "state3" type="button" (click) = "startScan()" class="w3-button" id = "scanButton">Scan</a>
   </div>
 
-  <!-- <div id = "footerContainer">
-    <p id = "footer">Powered by SMU ©2017-2017. </p>
-  </div> -->
 
-</div>
+
+
