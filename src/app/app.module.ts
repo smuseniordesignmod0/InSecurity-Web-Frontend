@@ -10,7 +10,7 @@ import { RouterReportComponent } from './components/routerReport/routerReport.co
 import { CveReportComponent } from './components/cveReport/cveReport.component';
 import { ApiService } from './services/api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdProgressSpinnerModule, MdToolbarModule, MdSidenavModule, MdListModule, MdButtonModule } from '@angular/material';
+import { MdProgressSpinnerModule, MdToolbarModule, MdSidenavModule, MdListModule, MdButtonModule, MdPaginatorModule, MdTableModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
@@ -32,7 +32,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), BrowserAnimationsModule,
     MdProgressSpinnerModule, HttpClientModule, MdToolbarModule,
-    MdSidenavModule, MdListModule, MdButtonModule
+    MdSidenavModule, MdListModule, MdButtonModule, MdPaginatorModule,
+    MdTableModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],

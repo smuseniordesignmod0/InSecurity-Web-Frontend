@@ -32,7 +32,10 @@
     <div class="col-md-4">
       <div class="list-group" style="background-color:white; padding-top:0px;">
           <div class="list-group-item" style="background-color:#4477b2; color: white">Common Vulnerabilities and Exposures</div>
-            <a *ngFor="let cve of router.host_CVE_list"href="/cveReport/{{id}}/{{cve.Vuln_ID}}" style="color: black;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{cve.Vuln_ID}} <small class="mb-1" style="text-align:right;"> Severity: {{cve.CVSS_Severity}} </small></div></a>
+          <md-paginator [pageSize]="10" [length]="router.host_CVE_list.length" (page)="pageEvent = $event"></md-paginator>
+            <md-table>
+            <md-cell *ngFor="let cve of router.host_CVE_list" href="/cveReport/{{id}}/{{cve.Vuln_ID}}" style="color: black;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{cve.Vuln_ID}} <small class="mb-1" style="text-align:right;"> Severity: {{cve.CVSS_Severity}} </small></div></md-cell>
+            </md-table>
         <!-- <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 2</li></a>
         <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 3</li></a>
         <a href="/deviceReport" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">CPE 4</li></a> -->
