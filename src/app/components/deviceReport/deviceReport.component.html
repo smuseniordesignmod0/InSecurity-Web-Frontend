@@ -1,9 +1,9 @@
-<div class="container-fluid" style="margin-top:30px;">
-  <div class="row" style="margin-bottom:30px;">
+<div class="container-fluid" style="margin-top:0px;">
+  <div class="row" style="margin-bottom:55px;">
     <div class="col-md-2"></div>
     <div class="col-md-3" style="margin-left:15px; position: relative; top: 30px;">
       <div class="row">
-        <h5>Device IP: {{myDeviceIP}}</h5>
+        <h5 class="header-text">Device IP: {{myDeviceIP}}</h5>
       </div>
 
       <!-- <div class="row">
@@ -13,7 +13,7 @@
         <h5></h5>
       </div> -->
       <div class="row">
-        <h5>Vulnerability Score: {{myDeviceVulnScore.toFixed(4)*100}}</h5>
+        <h5 class="header-text">Vulnerability Score: {{myDeviceVulnScore.toFixed(4)*100}}</h5>
       </div>
       <!-- <div class="row">
         <h5>Wireless</h5>
@@ -27,14 +27,14 @@
 
   <div class="row">
     <div class="col-md-2"></div>
-    <div class="col-md-4">
+    <div class="col-md-4" style="overflow: scroll; height:66vh;">
       <div class="list-group" style="background-color:white; padding-top:0px;">
-          <div class="list-group-item" style="background-color:#4477b2; color: white">Common Vulnerabilities and Exposures</div>
-            <a *ngFor="let vuln of myDeviceVulns"href="/cveReport/{{id}}/{{vuln.Vuln_ID}}" style="color: black;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{vuln.Vuln_ID}} <small class="mb-1" style="text-align:right;"> Severity: {{vuln.CVSS_Severity}} </small></div></a>
+          <div class="list-group-item" style="background-color:#4477b2; color: white;">Common Vulnerabilities and Exposures</div>
+            <a *ngFor="let vuln of myDeviceVulns"href="/cveReport/{{id}}/{{vuln.Vuln_ID}}" style="color: black; z-index:-0.5;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{vuln.Vuln_ID}} <small class="mb-1" style="text-align:right;"> Severity: {{vuln.CVSS_Severity}} </small></div></a>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="list-group" style="background-color:white; padding-top:0px;">
+    <div class="col-md-4" style="overflow: scroll;">
+      <div class="list-group" style="background-color:white; padding-top:0px; height:66vh;">
           <div class="list-group-item" style="background-color:#4477b2; color: white">Services</div>
             <a *ngFor="let service of myDeviceServices"href="/deviceReport" style="color: black;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{service.name}}<small class="mb-1" style="text-align:left;"> (Port: {{service.port}})</small></div></a>
       </div>

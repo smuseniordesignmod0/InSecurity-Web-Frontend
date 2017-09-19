@@ -1,16 +1,22 @@
-<div class="container-fluid" style="margin-top:30px;">
-  <div class="row" style="margin-bottom:30px;">
+<div class="container-fluid" style="margin-top:15pxpx;">
+  <div class="row" style="margin-bottom:0px;">
     <div class="col-md-2"></div>
     <div class="col-md-3" style="margin-left:15px; position: relative; top: 30px;">
       <div class="row">
         <!-- <h5>Score: {{report['Vulnerability_Score']}}</h5> -->
-        <h1 class="report-score-text">Score: {{roundedScore}}</h1>
+        <h1 class="report-score-text">Network Score: {{roundedScore}}</h1>
       </div>
     </div>
     <div class="col-md-3"></div>
     <div class="col-md-2">
       <!-- <h5>Grade: <span [ngClass]="{'text-color-insecure': insecureColor, 'text-color-kinda-secure': kindaSecureColor, 'text-color-secure': secureColor}">{{report['Vulnerability_Grade']}}</span></h5> -->
-      <!-- <img src="../../../assets/images/a_score2.png" height="100px" width="100px" style="float:right; margin-right:10px;"> -->
+      <img *ngIf="greenColor" src="../../../assets/images/a_score2.png" height="100px" width="100px" style="float:right; margin-right:10px; position:relative; top:33px;">
+      <img *ngIf="yellowColor" src="../../../assets/images/b_score.png" height="100px" width="100px" style="float:right; margin-right:10px; position:relative; top:33px;">
+      <img *ngIf="orangeColor" src="../../../assets/images/c_score.png" height="100px" width="100px" style="float:right; margin-right:10px; position:relative; top:33px;">
+      <img *ngIf="redColorD" src="../../../assets/images/d_score.png" height="100px" width="100px" style="float:right; margin-right:10px; position:relative; top:33px;">
+      <img *ngIf="redColorF" src="../../../assets/images/f_score.png" height="100px" width="100px" style="float:right; margin-right:10px; position:relative; top:33px;">
+
+
     </div>
   </div>
 
@@ -21,12 +27,12 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" style="margin-top:17px;">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-      <ul class="list-group" style="background-color:white;">
-        <li class="list-group-item" style="background-color:#4477b2; color: white">Connected Devices</li>
-        <a *ngFor="let item of report['Devices']" href="/deviceReport/{{id}}/{{item.IP}}" style="color: black;"><li class="list-group-item" style="border-bottom: 1px solid #fafbfc">{{item.IP}} <span class="badge connected-devices-badge">CVE Coverage: {{100 - (item.Vulnerability_Score.toFixed(2)*100)}}%</span></li></a>
+      <ul class="list-group no-decoretion" style="background-color:white; padding-top:0px; padding-bottom:0px; min-height:64vh;">
+        <li class="list-group-item" style="background-color:#4477b2; color: white;">Connected Devices</li>
+        <a *ngFor="let item of report['Devices']" href="/deviceReport/{{id}}/{{item.IP}}" style="color: black;"><li class="list-group-item hover-touch" style="border-bottom: 1px solid #fafbfc">{{item.IP}} <span class="badge connected-devices-badge">Vulnerability Score: {{item.Vulnerability_Score.toFixed(2)*100}}%</span></li></a>
       </ul>
     </div>
   </div>

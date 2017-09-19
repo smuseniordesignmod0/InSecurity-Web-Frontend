@@ -3,6 +3,14 @@
   color: #ffffff;
 }
 
+.router-info-btn:focus{
+  color: #ffffff;
+}
+
+.router-info-btn:hover{
+  color: #ffffff;
+}
+
 .report-score-text{
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -10,18 +18,40 @@
 
 .connected-devices-badge{
   position: relative;
-  left: 75%;
+  left: 70%;
+  text-decoration: none;
+  border-radius: 0px !important;
+  background-color: #eaeaea !important;
+  color:black;
+}
+
+.text-color-red {
+  background-color: #B24844;
+}
+
+.text-color-orange {
+  background-color:#F5A623;
+}
+
+.text-color-yellow {
+  background-color:#F8E71C;
+}
+
+.text-color-green {
+  background-color:#77b244;
+}
+
+.hover-touch  {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
   text-decoration: none;
 }
 
-.text-color-insecure {
-  color:red;
+.hover-touch:hover  {
+  text-decoration: none;
 }
 
-.text-color-kinda-secure {
-  color:yellow;
-}
-
-.text-color-secure {
-  color:green;
+.no-decoretion a:hover {
+  text-decoration: none;
+  background-color: rgba(68,119,178, 0.01);
 }

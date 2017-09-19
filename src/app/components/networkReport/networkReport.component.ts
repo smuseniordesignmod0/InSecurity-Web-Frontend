@@ -18,9 +18,15 @@ export class NetworkReportComponent {
     roundedScore = 0;
     deviceList = [];
     roundedBadgeNumbers = [];
-    insecureColor = false;
-    kindaSecureColor = false;
-    secureColor = false;
+    redColorF = false;
+    redColorD = false;
+    orangeColor = false;
+    yellowColor = false;
+    greenColor = false;
+    redpill = false;
+    orangepill = false;
+    yellowpill = false;
+    greenpill = false;
 
 
     constructor(private api: ApiService,
@@ -48,30 +54,40 @@ export class NetworkReportComponent {
       // }
 
       if (superThis.report['Vulnerability_Grade'] === "F"){
-        this.insecureColor = true;
-        this.kindaSecureColor = false;
-        this.secureColor = false;
+        this.redColorF = true;
+        this.redColorD = false;
+        this.orangeColor = false;
+        this.yellowColor = false;
+        this.greenColor = false;
       }
       else if (superThis.report['Vulnerability_Grade'] === "D"){
-        this.insecureColor = true;
-        this.kindaSecureColor = false;
-        this.secureColor = false;
+        this.redColorF = false;
+        this.redColorD = true;
+        this.orangeColor = false;
+        this.yellowColor = false;
+        this.greenColor = false;
       }
       else if (superThis.report['Vulnerability_Grade'] === "C"){
-        this.insecureColor = false;
-        this.kindaSecureColor = true;
-        this.secureColor = false;
+        this.redColorF = false;
+        this.redColorD = false;
+        this.orangeColor = true;
+        this.yellowColor = false;
+        this.greenColor = false;
 
       }
       else if (superThis.report['Vulnerability_Grade'] === "B"){
-        this.insecureColor = false;
-        this.kindaSecureColor = true;
-        this.secureColor = false;
+        this.redColorF = false;
+        this.redColorD = false;
+        this.orangeColor = false;
+        this.yellowColor = true;
+        this.greenColor = false;
       }
       else if (superThis.report['Vulnerability_Grade'] === "A"){
-        this.insecureColor = false;
-        this.kindaSecureColor = false;
-        this.secureColor = true;
+        this.redColorF = false;
+        this.redColorD = false;
+        this.orangeColor = false;
+        this.yellowColor = false;
+        this.greenColor = true;
       }
 
 }

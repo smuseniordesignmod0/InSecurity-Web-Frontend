@@ -3,3 +3,34 @@
   left: 75%;
   text-decoration: none;
 }
+
+.header-text {
+  color: #868e96!important;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300 !important;
+}
+
+.connected-devices-badge{
+  position: relative;
+  left: 0%;
+  text-decoration: none;
+  border-radius: 0px !important;
+  background-color: #eaeaea !important;
+  color:black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.hover-touch  {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.hover-touch:hover  {
+  text-decoration: none;
+}
+
+.no-decoretion:hover {
+  text-decoration: none;
+  background-color: rgba(68,119,178, 0.01);
+}
