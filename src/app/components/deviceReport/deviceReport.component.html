@@ -29,14 +29,24 @@
     <div class="col-md-2"></div>
     <div class="col-md-4" style="overflow: scroll; height:66vh;">
       <div class="list-group" style="background-color:white; padding-top:0px;">
-          <div class="list-group-item" style="background-color:#4477b2; color: white;">Common Vulnerabilities and Exposures</div>
+          <!-- <div class="list-group-item" style="background-color:#4477b2; color: white;">Common Vulnerabilities and Exposures</div>
             <a *ngFor="let vuln of myDeviceVulns"href="/cveReport/{{id}}/{{vuln.Vuln_ID}}" style="color: black; z-index:-0.5;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{vuln.Vuln_ID}} <small class="mb-1" style="text-align:right;"> Severity: {{vuln.CVSS_Severity}} </small></div></a>
       </div>
     </div>
     <div class="col-md-4" style="overflow: scroll;">
       <div class="list-group" style="background-color:white; padding-top:0px; height:66vh;">
           <div class="list-group-item" style="background-color:#4477b2; color: white">Services</div>
-            <a *ngFor="let service of myDeviceServices"href="/deviceReport" style="color: black;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{service.name}}<small class="mb-1" style="text-align:left;"> (Port: {{service.port}})</small></div></a>
+            <a *ngFor="let service of myDeviceServices"href="/deviceReport" style="color: black;"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{service.name}}<small class="mb-1" style="text-align:left;"> (Port: {{service.port}})</small></div></a> -->
+
+          <div class="list-group-item" style="background-color:#4477b2; color: white"><div class="pull-left">Common Vulnerabilities and Exposures</div><div class="pull-right"><span class="glyphicon glyphicon-circle-arrow-left" (click)="changeCVEPage(-1,myDeviceVulns)"></span><span class="glyphicon glyphicon-circle-arrow-right" (click)="changeCVEPage(1,myDeviceVulns)"></span></div><div class="clearfix"></div></div>
+            <ng-container *ngFor="let vuln of myDeviceVulns; let i = index"><a href="/cveReport/{{id}}/{{vuln.Vuln_ID}}" style="color: black;" *ngIf="showList(i,cveLimit)"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{vuln.Vuln_ID}} <small class="mb-1" style="text-align:right;"> Severity: {{vuln.CVSS_Severity}} </small></div></a></ng-container>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="list-group" style="background-color:white; padding-top:0px;">
+          <div class="list-group-item" style="background-color:#4477b2; color: white"><div class="pull-left">Services</div><div class="pull-right"><span class="glyphicon glyphicon-circle-arrow-left" (click)="changeServicePage(-1,myDeviceServices)"></span><span class="glyphicon glyphicon-circle-arrow-right" (click)="changeServicePage(1,myDeviceServices)"></span></div><div class="clearfix"></div></div>
+            <ng-container *ngFor="let service of myDeviceServices; let i = index"><a href="/deviceReport" style="color: black;" *ngIf="showList(i,serviceLimit)"><div class="list-group-item d-flex w-100 justify-content-between" style="border-bottom: 1px solid #fafbfc">{{service.name}}<small class="mb-1" style="text-align:left;"> (Port: {{service.port}})</small></div></a></ng-container>
+
       </div>
     </div>
   </div>

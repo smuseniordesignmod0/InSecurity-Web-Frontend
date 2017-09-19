@@ -11,14 +11,25 @@
     <p id = "instruction">
       Hit Scan to get an evaluation of the current network you are connected to
     </p>
+=======
+<particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+<div class = "bg">
+
+
+  <div id ="instruContainer">
+    <p id = "text1" [@state] = "state1"> Welcome to Insecurity <br></p>
+    <p id = "text2" [@state] = "state2"> We are here to test your network security<br></p>
+    <p id = "text2" [@state] = "state3"> Hit the Scan button to start<br></p>
+
+>>>>>>> 009f085010bec037ae4c6f0d843ddd41c5a97eff
   </div>
-  <div class="circle"><p id = "percent">0 % </p></div>
   <div   id = "buttonContainer">
-    <button type="button" (click)="startScan()" routerLinkActive="active" class="w3-button" id = "scanButton">Scan</button>
+    <button [@state] = "state3" (click) = "toggleState()" type="button" routerLink = "/result" routerLinkActive="active" class="w3-button" id = "scanButton">Scan</button>
   </div>
 
   <div id = "footerContainer">
     <p id = "footer">Powered by SMU ©2017-2017. </p>
+<<<<<<< HEAD
   </div>
 </div>
 </div> -->
@@ -38,4 +49,4 @@
   </div>
 
 
-</div>
+  </div>
